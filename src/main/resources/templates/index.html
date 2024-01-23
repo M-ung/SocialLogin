@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>소셜로그인 예제</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F7E316;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .kakao-btn {
+            background-color: #FFEB00;
+            color: #3C1E1E;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .kakao-btn:hover {
+            background-color: #EADB00;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h2>로그인</h2>
+    <!-- 카카오 로그인 주소를 Thymeleaf 표현식으로 넣어보세요 -->
+    <p><a class="kakao-btn" th:href="@{'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=3d83704a506c101d079ccb4927d62bce&redirect_uri=http://localhost:8081/kakao&response_type=code'}">카카오로 로그인</a></p>
+</div>
+</body>
+</html>
